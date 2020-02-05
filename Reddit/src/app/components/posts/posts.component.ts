@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,7 +7,9 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+  @Input()
   posts: any[];
+  
   private data: any[];
   constructor(private http: HttpClient) { }
 

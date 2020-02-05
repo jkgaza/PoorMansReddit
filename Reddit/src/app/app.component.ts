@@ -9,15 +9,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'Reddit';
-  private data: any = []
+  private data: any[]
   constructor(private http: HttpClient){
 
   }
 
   getData(){
     const url ='https://www.reddit.com/r/aww/.json'
-    this.http.get(url).subscribe((res)=>{
-      this.data = res
+    this.http.get(url).subscribe((res : any)=>{
+      this.data = res.data.children
       console.log(this.data)
     })
   }

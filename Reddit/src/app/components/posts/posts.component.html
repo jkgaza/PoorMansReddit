@@ -9,14 +9,15 @@
 
 
 
-<!-- <div class="row">
+<div class="row">
     
     <div class="card" *ngFor="let p of posts">
         <div class="card-body">
-          <h4 class="card-title">{{ p.Title }}</h4>
-          <h5>{{ p.Link }}</h5>
-          <img class = "card-img-top" [src]="p.Thumbnail" alt="p.Thumbnail" class="img img-thumbnail" />
+          <h4 class="card-title">{{ p.data.title }}</h4>
+          <a href="http://reddit.com/{{ p.data.permalink }}">Read More</a>
+          <!-- <h5>{{ p.data.permalink }}</h5> -->
+          <img class = "card-img-top" [src]="p.data.thumbnail" alt="p.Thumbnail" class="img img-thumbnail" />
         </div>
       </div>
 
-</div> -->
+</div>
