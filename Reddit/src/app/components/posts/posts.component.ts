@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-posts',
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
   posts: any[];
-  
-  constructor() { }
+  private data: any[];
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
+
+  // getData(){
+  //   const url ='https://www.reddit.com/r/aww/.json'
+  //   this.http.get(url).subscribe((res)=>{
+  //     this.data = res
+  //     console.log(this.data)
+  //   })
+  // }
 
 }
